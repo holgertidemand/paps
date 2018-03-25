@@ -8,6 +8,11 @@ Feature: Create articles
       | name    |
       | Fashion |
 
+    And the following user exists
+      | email           | password    | password_confirmation |
+      | harald@norge.no | OsloOslo123 | OsloOslo123           |
+
+    And I am logged in as "harald@norge.no"
     And I visit the Homepage
 
   Scenario: Successfully create an article
